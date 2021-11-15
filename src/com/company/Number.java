@@ -101,7 +101,7 @@ public class Number {
         //------------------------------------------------------------------------------------------
     }
 
-    public static int[] arab(String first_num, String second_mun) {
+    public static boolean arab(String first_num, String second_mun) {
         int a = 0;
         int b = 0;
         //System.out.println(Arrays.toString(mas));
@@ -120,10 +120,11 @@ public class Number {
             if (k == 2) {
                 a = Integer.parseInt(first_num);
                 b = Integer.parseInt(second_mun);
-                break;
+                return true;
             }
         }
-        return new int[]{a, b};
+        return false;
+        //return new int[]{a, b};
     }
 
     public static boolean in_rimskoe(String first_num, String second_mun) {
